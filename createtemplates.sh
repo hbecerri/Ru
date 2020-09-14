@@ -31,6 +31,9 @@ python New_q2_SR0T.py
 python New_q2_SR1T.py
 
 python Full_sys.py
+python TxTDC_7TeV.py
+
+
 
 combineCards.py SR1T_muon=SR1T_muon.txt SR0T_muon=SR0T_muon.txt CR1_muon=CR1_muon.txt CR2_muon=CR2_muon.txt > Combined_muon.txt
 text2workspace.py Combined_muon.txt
