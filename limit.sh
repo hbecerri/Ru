@@ -12,7 +12,7 @@ for i in "${arr[@]}"
 do
 	python TxtDC_limits.py ${i}
         combineCards.py SR1T_muon=SR1T_muon.txt SR0T_muon=SR0T_muon.txt CR1_muon=CR1_muon.txt CR2_muon=CR2_muon.txt > Signal_Region.txt
-        combine -M AsymptoticLimits Signal_Region.txt --noFitAsimov >> ZprimeNarrow_limits.txt
+        combine -M AsymptoticLimits Signal_Region.txt --noFitAsimov --freezeParameters ST_rate,ttbar_rate ... --setParameters ST_rate=1.697,ttbar_rate=0.879 ... >> ZprimeNarrow_limits.txt
         sed -i 's/Done.*//g' ZprimeNarrow_limits.txt
         sed -i 's/Will.*//g' ZprimeNarrow_limits.txt
         sed -i 's/ <<<.*//g' ZprimeNarrow_limits.txt
